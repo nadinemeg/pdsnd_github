@@ -161,6 +161,7 @@ def user_stats(df):
     user_counts = df['User Type'].value_counts()
 
     # iteratively print out the total numbers of user types
+    # using {} .format() is a great example of good refactoring
     for index, user_count in enumerate(user_counts):
         print("  {}: {}".format(user_counts.index[index], user_count))
 
