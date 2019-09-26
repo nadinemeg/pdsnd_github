@@ -5,7 +5,7 @@ Create date: 15-09-2019
 Bikeshare Insight Tool
 
 ### Description
-Describe what your project is about and what it does
+This project gives you the most incredible insights into bikesare data in the US
 
 ### Files used
 Include the files used
