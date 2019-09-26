@@ -126,7 +126,7 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
     df['Start End'] = df['Start Station'].map(str) + '&' + df['End Station']
     popular_start_end = df['Start End'].value_counts().idxmax()
-    print('The most commonly used start station and end station: ', popular_start_end)
+    print('The most commonly used start and end station: ', popular_start_end)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -161,6 +161,7 @@ def user_stats(df):
     user_counts = df['User Type'].value_counts()
 
     # iteratively print out the total numbers of user types
+    # using {} .format() is a great example of good refactoring
     for index, user_count in enumerate(user_counts):
         print("  {}: {}".format(user_counts.index[index], user_count))
 
